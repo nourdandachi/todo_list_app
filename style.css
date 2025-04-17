@@ -59,22 +59,43 @@ body{
     margin-left: 20px;
 
 }
-.new-window{
-    display: none;
-    margin-top: 20px;
-    /* display: none; */
-    background-color: white;
-    width: 280px;
-    height: 127px;
-    border-radius: 0.25cm;
+.new-window {
+    display: none; /* initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+      height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* dim background */
     
-}
-
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* make sure it’s above the rest */
+  }
+  
+  .window-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  .new-window > div,
+  .new-window .add-task-container,
+  .new-window .window-btns {
+    background-color: white;
+    padding: 15px;
+    border-radius: 0.25cm;
+  }
 .window-btns{
     display: flex;
     justify-content: flex-end;
-    margin-top: 7px;
-    margin-right: 20px;
+    /* margin-top: 7px;
+    margin-right: 20px; */
     gap: 5px;
 }
 
