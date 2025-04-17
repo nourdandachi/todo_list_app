@@ -49,7 +49,34 @@ body{
     
 }
 
+.add-task-container{
+    border: 2px solid  rgb(166, 105, 222);
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin-right: 20px;
+    margin-left: 20px;
 
+}
+.new-window{
+    display: none;
+    margin-top: 20px;
+    /* display: none; */
+    background-color: white;
+    width: 280px;
+    height: 127px;
+    border-radius: 0.25cm;
+    
+}
+
+.window-btns{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7px;
+    margin-right: 20px;
+    gap: 5px;
+}
 
 input{
     border: none;
@@ -76,7 +103,7 @@ input{
     cursor: pointer;
 }
 
-#add-btn{
+#plus-btn{
     border-radius: 0.50%;
     border-radius: 50%;
     width: 40px;
@@ -92,6 +119,29 @@ input{
     font-size: 20px;
 }
 
+#cancel-btn{
+    border-radius: 0.15cm;
+    background-color: rgb(182, 176, 188);
+    cursor: pointer;
+    border: none;
+    color: rgb(75, 71, 78);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px;
+    
+}
+
+#add-btn{
+    border-radius: 0.15cm;
+    background-color: rgb(166, 105, 222);
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 550;
+    padding: 7px;
+}
+
 .main-container h1{
 
     text-align: center;
@@ -99,4 +149,11 @@ input{
 
 h1{
     color: rgb(75, 71, 78);
+    padding-top: 10px;
+}
+
+h3{
+    color: rgb(75, 71, 78);
+    padding-top: 10px;
+    margin-left: 20px;
 }
