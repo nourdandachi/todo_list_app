@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         checkbox.addEventListener('change', () => {
             li.classList.toggle('completed');
+            filterTasks(filterSelect.value);
         })
 
         deleteTask.addEventListener('click', () => {
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     }
 
-    
+
 
     
     searchInput.addEventListener('input', () => {
@@ -75,4 +76,30 @@ document.addEventListener('DOMContentLoaded', () =>{
 
         })
     })
+
+    filterSelect.addEventListener('change', () =>{
+        const option = filterSelect.value;
+        filterTasks(option);
+    })
+
+    function filterTasks(option){
+        const tasks= document.querySelectorAll('.task');
+
+        tasks.forEach(task => {
+            const isChecked = task.querySelector('input[type="checkbox"]').checked;
+
+            if (option === 'all'){
+                task.style.display = 'flex';
+            }
+            else if (option === 'completed' && isChecked){
+                task.style.display = 'flex';
+            }
+            else if (option === 'pending' && !isChecked){
+                task.style.display = 'flex';
+            }
+            else{
+                task.style.display = 'none';
+            }
+        });
+    }
 })

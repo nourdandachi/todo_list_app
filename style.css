@@ -238,3 +238,10 @@ h3{
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   }
+
+
+  .task.completed label span {
+    text-decoration: line-through;
+    color: #aaa;
+    opacity: 0.7;
+  }
