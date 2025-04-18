@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const cancelBtn = document.getElementById('cancel-btn')
     const saveBtn = document.getElementById('add-btn')
     const searchInput= document.querySelector('.search-container input');
+    const filterSelect= document.getElementById('filter-select');
 
     addBtn.addEventListener('click', () =>{
         window.style.display = 'flex';
@@ -58,5 +59,20 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     }
 
+    
 
+    
+    searchInput.addEventListener('input', () => {
+        const search = searchInput.value.toLowerCase();
+        document.querySelectorAll('.task').forEach(task => {
+            const text = task.innerText.toLowerCase();
+            if(text.includes(search)){
+                task.style.display= 'flex';
+            }
+            else{
+                task.style.display= 'none';
+            }
+
+        })
+    })
 })
